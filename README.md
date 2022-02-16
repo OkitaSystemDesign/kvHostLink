@@ -28,6 +28,29 @@ Set up time of the CPU unit
 Send the date and time of your computer
 Retrun: EtherNet/IP Unit Response
 
+### hostlink.set(address)
+Forced Set
+address = R00000-199915, B0000-7FFF, MR00000-399915, LR00000-99915, CR0000-7915, T0000-3999, C0000-3999, CTC0-3, VB0000-F9FF 
+Retrun: EtherNet/IP Unit Response
+
+### hostlink.reset(address)
+Forced Reset
+address = R00000-199915, B0000-7FFF, MR00000-399915, LR00000-99915, CR0000-7915, T0000-3999, C0000-3999, CTC0-3, VB0000-F9FF 
+Retrun: EtherNet/IP Unit Response
+
+### hostlink.sts(address)
+Continuous Forced Set
+address = R00000-199915, B0000-7FFF, MR00000-399915, LR00000-99915, CR0000-7915, VB0000-F9FF 
+num = number of written data
+Retrun: EtherNet/IP Unit Response
+
+### hostlink.rss(address, num)
+Continuous Forced Reset
+address = R00000-199915, B0000-7FFF, MR00000-399915, LR00000-99915, CR0000-7915, VB0000-F9FF 
+num = number of written data
+Retrun: EtherNet/IP Unit Response
+
+
 ### hostlink.write(memAddres, data)
 Memory Area Write  
 memAddress = D0-D32767, E0_0-EF_32767, W0-511, 0-6143  
