@@ -1,20 +1,16 @@
-# kvHostLink
-KEYENCE HostLink
-
-# finsudp.py
-OMRON FINS protocol UDP connection  
-Memory Area Read Write
+# hostlink.py
+KEYENCE HostLink Communication for UDP/IP
 
 # Constructor
-fins(host, destFinsAddress, sorceFinsAddres)
+hostlink(host)
 
 # Functions
-### fins.read(memAddres, size)
+### hostlink.mode(memAddres, size)
 Memory Area Read  
 memAddress = D0-D32767, E0_0-EF_32767, W0-511, 0-6143  
 Return: bytes()
 
-### fins.write(memAddres, data)
+### hostlink.write(memAddres, data)
 Memory Area Write  
 memAddress = D0-D32767, E0_0-EF_32767, W0-511, 0-6143  
 data = bytes()  
