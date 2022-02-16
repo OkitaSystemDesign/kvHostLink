@@ -5,46 +5,46 @@ KEYENCE HostLink Communication for UDP/IP
 kvhostlink(host)
 
 # Functions
-### hostlink.mode(mode)
+### .mode(mode)
 Change Mode  
 0 = PROGRAM  
 1 = RUN  
 Retrun: EtherNet/IP Unit Response
 
-### hostlink.unittype()
+### .unittype()
 Checks PLC model  
 Retrun: EtherNet/IP Unit Response
 
-### hostlink.errclr()
+### .errclr()
 Removes the error in CPU unit  
 Retrun: EtherNet/IP Unit Response
 
-### hostlink.er()
+### .er()
 Confirm Error No  
 Retrun: EtherNet/IP Unit Response
 
-### hostlink.settime()
+### .settime()
 Set up time of the CPU unit  
 Send the date and time of your computer
 Retrun: EtherNet/IP Unit Response
 
-### hostlink.set(address)
+### .set(address)
 Forced Set
 address = R00000-199915, B0000-7FFF, MR00000-399915, LR00000-99915, CR0000-7915, T0000-3999, C0000-3999, CTC0-3, VB0000-F9FF 
 Retrun: EtherNet/IP Unit Response
 
-### hostlink.reset(address)
+### .reset(address)
 Forced Reset
 address = R00000-199915, B0000-7FFF, MR00000-399915, LR00000-99915, CR0000-7915, T0000-3999, C0000-3999, CTC0-3, VB0000-F9FF 
 Retrun: EtherNet/IP Unit Response
 
-### hostlink.sts(address)
+### .sts(address)
 Continuous Forced Set
 address = R00000-199915, B0000-7FFF, MR00000-399915, LR00000-99915, CR0000-7915, VB0000-F9FF 
 num = number of written data
 Retrun: EtherNet/IP Unit Response
 
-### hostlink.rss(address, num)
+### .rss(address, num)
 Continuous Forced Reset
 address = R00000-199915, B0000-7FFF, MR00000-399915, LR00000-99915, CR0000-7915, VB0000-F9FF 
 num = number of written data
