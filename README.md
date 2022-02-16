@@ -1,14 +1,29 @@
-# hostlink.py
+# kvhostlink.py
 KEYENCE HostLink Communication for UDP/IP
 
 # Constructor
-hostlink(host)
+kvhostlink(host)
 
 # Functions
-### hostlink.mode(memAddres, size)
-Memory Area Read  
-memAddress = D0-D32767, E0_0-EF_32767, W0-511, 0-6143  
-Return: bytes()
+### hostlink.mode(mode)
+Change Mode  
+0 = PROGRAM  
+1 = RUN  
+
+### hostlink.unittype()
+Checks PLC model  
+
+### hostlink.errclr()
+Removes the error in CPU unit  
+
+### hostlink.er()
+Confirm Error No  
+Retrun: Error No
+
+### hostlink.settime()
+Set up time of the CPU unit  
+Send the date and time of your computer
+Retrun: Error No
 
 ### hostlink.write(memAddres, data)
 Memory Area Write  
