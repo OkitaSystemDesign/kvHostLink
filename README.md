@@ -54,40 +54,57 @@ Retrun: EtherNet/IP Unit Response
 Data Read  
 addresssuffix = DeviceType + DeviceNo + DataFormat  
  .e.g. MR0, DM0.U  
-Return: fins responce
+Return: EtherNet/IP Unit Response
 
+### .reads(addresssuffix, num)
+Consecutive Data Read  
+addresssuffix = DeviceType + DeviceNo + DataFormat  
+ .e.g. MR0, DM0.U  
+num = number of read data  
+Return: EtherNet/IP Unit Response (Data1 + 0x20 + Data2 + 0x20 ...)  
 
-### .write(memAddres, data)
-Memory Area Write  
-memAddress = D0-D32767, E0_0-EF_32767, W0-511, 0-6143  
-data = bytes()  
-Return: fins responce
+### .write(addresssuffix, data)
+Write Data  
+addresssuffix = DeviceType + DeviceNo + DataFormat  
+ .e.g. MR0, DM0.U  
+data = byte()  
+Return: EtherNet/IP Unit Response
 
-### fins.toInt16(data)
-Convert to 16bit data  
-### fins.toInt32(data)
-Convert to 32bit data  
-### fins.toInt64(data)
-Convert to 64bit data  
-### fins.toUInt16(data)
-Convert to Unsigned 16bit data  
-### fins.toUInt32(data)
-Convert to Unsigned 32bit data  
-### fins.toUInt64(data)
-Convert to Unsigned 64bit data  
-### fins.toFloat(data)
-Convert to Float data  
-### fins.toDouble(data)
-Convert to Double data  
+### .writes(addresssuffix, data)
+Write Consecutive Data  
+addresssuffix = DeviceType + DeviceNo + DataFormat  
+ .e.g. MR0, DM0.U  
+data = byte() (data1 + 0x20 + data2 + 0x20 ...) 
+Return: EtherNet/IP Unit Response  
 
- return: list
  
-
 # Example
 ```
-finsudp = fins('192.168.250.1', '0.1.0', '0.10.0')
-data = finsudp.read('E0_30000", 10)
-print(finsudp.toInt16(data))
-rcv = finsudp.write('E0_0', data)
-print(rcv)
+finsudp = fins('192.168.0.31')
+data = kv.mode('1')
+print(data)
+data = kv.er()
+print(data)
+data = kv.errclr()
+print(data)
+data = kv.unittype()
+print(data)
+data = kv.settime()
+print(data)
+data = kv.set('MR0')
+print(data)
+data = kv.reset('MR1')
+print(data)
+data = kv.sts('MR10', 5)
+print(data)
+data = kv.rss('MR10', 4)
+print(data)
+data = kv.read('DM0.U')
+print(data)
+data = kv.reads('DM0.S', 4)
+print(data)
+data = kv.write('DM0.U', '2')
+print(data)
+data = kv.writs('DM1.S', 4, '1 2 3 4')
+print(data)
 ```
