@@ -9,21 +9,24 @@ kvhostlink(host)
 Change Mode  
 0 = PROGRAM  
 1 = RUN  
+Retrun: EtherNet/IP Unit Response
 
 ### hostlink.unittype()
 Checks PLC model  
+Retrun: EtherNet/IP Unit Response
 
 ### hostlink.errclr()
 Removes the error in CPU unit  
+Retrun: EtherNet/IP Unit Response
 
 ### hostlink.er()
 Confirm Error No  
-Retrun: Error No
+Retrun: EtherNet/IP Unit Response
 
 ### hostlink.settime()
 Set up time of the CPU unit  
 Send the date and time of your computer
-Retrun: Error No
+Retrun: EtherNet/IP Unit Response
 
 ### hostlink.write(memAddres, data)
 Memory Area Write  
