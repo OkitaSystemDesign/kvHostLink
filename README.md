@@ -30,28 +30,34 @@ Retrun: EtherNet/IP Unit Response
 
 ### .set(address)
 Forced Set
-address = R00000-199915, B0000-7FFF, MR00000-399915, LR00000-99915, CR0000-7915, T0000-3999, C0000-3999, CTC0-3, VB0000-F9FF 
+address = R0-199915, B0-7FFF, MR0-399915, LR0-99915, CR0-7915, T0-3999, C0-3999, CTC0-3, VB0-F9FF  
 Retrun: EtherNet/IP Unit Response
 
 ### .reset(address)
-Forced Reset
-address = R00000-199915, B0000-7FFF, MR00000-399915, LR00000-99915, CR0000-7915, T0000-3999, C0000-3999, CTC0-3, VB0000-F9FF 
+Forced Reset  
+address = R0-199915, B0-7FFF, MR0-399915, LR0-99915, CR0-7915, T0-3999, C0-3999, CTC0-3, VB0-F9FF  
 Retrun: EtherNet/IP Unit Response
 
 ### .sts(address)
-Continuous Forced Set
-address = R00000-199915, B0000-7FFF, MR00000-399915, LR00000-99915, CR0000-7915, VB0000-F9FF 
-num = number of written data
+Continuous Forced Set  
+address = R0-199915, B0-7FFF, MR0-399915, LR0-99915, CR0-7915, VB0-F9FF  
+num = number of written data  
 Retrun: EtherNet/IP Unit Response
 
 ### .rss(address, num)
-Continuous Forced Reset
-address = R00000-199915, B0000-7FFF, MR00000-399915, LR00000-99915, CR0000-7915, VB0000-F9FF 
-num = number of written data
+Continuous Forced Reset  
+address = R0-199915, B0-7FFF, MR0-399915, LR0-99915, CR0-7915, VB0-F9FF  
+num = number of written data  
 Retrun: EtherNet/IP Unit Response
 
+### .read(addresssuffix)
+Data Read  
+addresssuffix = DeviceType + DeviceNo + DataFormat  
+ .e.g. MR0, DM0.U  
+Return: fins responce
 
-### hostlink.write(memAddres, data)
+
+### .write(memAddres, data)
 Memory Area Write  
 memAddress = D0-D32767, E0_0-EF_32767, W0-511, 0-6143  
 data = bytes()  
