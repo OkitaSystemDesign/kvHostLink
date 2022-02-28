@@ -80,7 +80,7 @@ Return: EtherNet/IP Unit Response
  
 # Example
 ```
-finsudp = fins('192.168.0.31')
+kv = kvHostLink('192.168.0.31')
 data = kv.mode('1')
 print(data)
 data = kv.er()
