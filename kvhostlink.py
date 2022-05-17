@@ -1,9 +1,5 @@
-#! /usr/bin/python3.4
-# -*- coding: utf-8 -*-
-
 import time
 from socket import *
-import struct
 import datetime
 
 BUFSIZE = 4096
@@ -20,18 +16,11 @@ class kvHostLink:
 
     def sendrecive(self, command):
         s = socket(AF_INET, SOCK_DGRAM)
-        s.bind(('', self.port))
         s.settimeout(2)
 
-        starttime = time.time()
-
         s.sendto(command, self.addr)
-        #print("send:%r" % (command))
         rcvdata = s.recv(BUFSIZE)
 
-        elapsedtime = time.time() - starttime
-        #print ('receive: %r\t Length=%r\telapsedtime = %sms' % (rcvdata, len(rcvdata), str(elapsedtime * 1000)))
-        #print()
         return rcvdata
 
     def mode(self, mode):
@@ -98,30 +87,31 @@ class kvHostLink:
         return rcv
 
 
-kv = kvHostLink('192.168.0.31')
-data = kv.mode('1')
-print(data)
-data = kv.er()
-print(data)
-data = kv.errclr()
-print(data)
-data = kv.unittype()
-print(data)
-data = kv.settime()
-print(data)
-data = kv.set('MR0')
-print(data)
-data = kv.reset('MR1')
-print(data)
-data = kv.sts('MR10', 5)
-print(data)
-data = kv.rss('MR10', 4)
-print(data)
-data = kv.read('DM0.U')
-print(data)
-data = kv.reads('DM0.S', 4)
-print(data)
-data = kv.write('DM0.U', '2')
-print(data)
-data = kv.writs('DM1.S', 4, '1 2 3 4')
-print(data)
+if __name__ == "__main__":
+    kv = kvHostLink('192.168.0.31')
+    data = kv.mode('1')
+    print(data)
+    data = kv.er()
+    print(data)
+    data = kv.errclr()
+    print(data)
+    data = kv.unittype()
+    print(data)
+    data = kv.settime()
+    print(data)
+    data = kv.set('MR0')
+    print(data)
+    data = kv.reset('MR1')
+    print(data)
+    data = kv.sts('MR10', 5)
+    print(data)
+    data = kv.rss('MR10', 4)
+    print(data)
+    data = kv.read('DM0.U')
+    print(data)
+    data = kv.reads('DM0.S', 4)
+    print(data)
+    data = kv.write('DM0.U', '2')
+    print(data)
+    data = kv.writs('DM1.S', 4, '1 2 3 4')
+    print(data)
