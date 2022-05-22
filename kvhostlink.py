@@ -86,6 +86,13 @@ class kvHostLink:
         rcv = self.sendrecive(('WRS ' + addresssuffix + ' ' + str(num) + ' ' + data + '\r').encode())
         return rcv
 
+    def mws(self, addresses):
+        rcv = self.sendrecive(('MWS ' + addresses + '\r').encode())
+        return rcv
+
+    def mwr(self):
+        rcv = self.sendrecive(('MWR\r').encode())
+        return rcv
 
 if __name__ == "__main__":
     kv = kvHostLink('192.168.0.31')
