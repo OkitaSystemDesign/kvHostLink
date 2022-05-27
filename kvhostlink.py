@@ -122,3 +122,7 @@ if __name__ == "__main__":
     print(data)
     data = kv.writs('DM1.S', 4, '1 2 3 4')
     print(data)
+    data = kv.mws('DM0.H DM1.S DM2.L DM4.U DM5.D')
+    print(data)
+    data = kv.mwr()
+    print(data)
