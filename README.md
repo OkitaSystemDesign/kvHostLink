@@ -77,13 +77,13 @@ addresssuffix = DeviceType + DeviceNo + DataFormat
 data = byte() (data1 + 0x20 + data2 + 0x20 ...) 
 Return: EtherNet/IP Unit Response  
 
-# mws(addresses)
+### mws(addresses)
 Register monitor
 addresses = DeviceType + DeviceNo + DataFormat  
  .e.g. 'DM0.H DM1.S DM2.L DM4.U DM5.D'  
 Return: EtherNet/IP Unit Response  
 
-# mwr()
+### mwr()
 Read monitor
 Return: EtherNet/IP Unit Response (Data1 + 0x20 + Data2 + 0x20 ...)  
 
