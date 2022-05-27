@@ -84,7 +84,7 @@ addresses = DeviceType + DeviceNo + DataFormat
 Return: EtherNet/IP Unit Response  
 
 ### mwr()
-Read monitor
+Read monitor  
 Return: EtherNet/IP Unit Response (Data1 + 0x20 + Data2 + 0x20 ...)  
 
 # Example
