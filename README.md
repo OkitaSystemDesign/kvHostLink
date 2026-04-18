@@ -89,7 +89,7 @@ Return: EtherNet/IP Unit Response (Data1 + 0x20 + Data2 + 0x20 ...)
 
 # Example
 ```
-kv = kvHostLink('192.168.250.32')
+kv = kvHostLink('192.168.250.10')
 data = kv.mode('1')
 print(data)						# b'OK\r\n'
 data = kv.unittype()
