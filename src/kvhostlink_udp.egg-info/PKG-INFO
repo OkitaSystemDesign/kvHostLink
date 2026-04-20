@@ -1,6 +1,6 @@
 Metadata-Version: 2.4
 Name: kvhostlink-udp
-Version: 0.1.0
+Version: 0.1.1
 Summary: KEYENCE HostLink UDP communication library
 Author: Okita Systam Design
 License: 
@@ -32,7 +32,7 @@ Dynamic: license-file
 # kvhostlink.py
 KEYENCE HostLink Communication for UDP/IP
 
-#install
+# Install
 pip install kvhostlink-udp
 
 # Constructor

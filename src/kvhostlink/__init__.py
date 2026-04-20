@@ -1,3 +1,3 @@
-from .kvhostlink import kvHostLink
+from .client import kvHostLink
 
 __all__ = ["kvHostLink"]

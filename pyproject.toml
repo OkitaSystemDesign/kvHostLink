@@ -1,6 +1,6 @@
 [project]
 name = "kvhostlink-udp"
-version = "0.1.0"
+version = "0.1.1"
 description = "KEYENCE HostLink UDP communication library"
 readme = "README.md"
 authors = [{ name = "Okita Systam Design" }]
