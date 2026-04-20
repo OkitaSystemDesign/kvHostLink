@@ -1,7 +1,7 @@
 # kvhostlink.py
 KEYENCE HostLink Communication for UDP/IP
 
-#install
+# install
 pip install kvhostlink-udp
 
 # Constructor
