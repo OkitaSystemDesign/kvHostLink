@@ -1,0 +1,31 @@
+[project]
+name = "kvhostlink-udp"
+version = "0.1.0"
+description = "KEYENCE HostLink UDP communication library"
+readme = "README.md"
+authors = [{ name = "Okita Systam Design" }]
+license = { file = "LICENSE" }
+requires-python = ">=3.8"
+
+dependencies = []
+
+keywords = ["PLC", "KEYENCE", "HostLink", "UDP", "industrial"]
+
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/OkitaSystemDesign/kvhostlink"
+Repository = "https://github.com/OkitaSystemDesign/kvhostlink"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
