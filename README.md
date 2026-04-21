@@ -5,7 +5,7 @@ KEYENCE HostLink Communication for UDP/IP
 pip install kvhostlink-udp
 
 # Constructor
-kvhostlink(host)
+kvhostlink(host, timeout)
 
 # Functions
 ### mode(mode)
